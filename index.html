@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+<link rel="stylesheet" href="css/bootstrap.css">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+
+<script>
+
+setInterval(function() {
+    $( "#d-day" ).fadeToggle();
+}, 1000);
+    const countDownDate = new Date("December 21, 2018 06:00:00").getTime();
+
+//1초마다 갱신되도록 함수 생성,실행
+const x = setInterval(function() {
+    // 오늘 날짜 등록
+    const now = new Date().getTime();
+
+    // 종료일자에서 현재일자를 뺀 시간
+    const distance = countDownDate - now;
+
+    // 각 변수에 일, 시, 분, 초를 등록
+    const d = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const h = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const m = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const s = Math.floor((distance % (1000 * 60)) / 1000);
+
+    //id가 d-day인 HTML코드에 내용 삽입
+    document.getElementById("d-day").innerHTML = "핫딜 마감까지 " + d +"일 " + h + "시간 " + m + "분 " + s + "초 남았습니다.";
+        });
+    </script>
+
+<style>
+#product div {
+	border: 2px solid black;
+}
+
+#product a {
+	border-right: 2px solid black;
+}
+
+.col-md-9 a {
+	float: left;
+	margin-top: 1%;
+	margin-left: 13%;
+	padding-right: 5%;
+}
+
+.col-md-3 {
+	margin-top: 3%;
+}
+
+#sell-tag {
+	height: 70px;
+	width: 100%;
+	margin-top: 0px;
+	background: rgba(223, 223, 223, 0.815);
+	padding: 1px;
+}
+
+#d-day {
+	color: red;
+	font-size: 30px;
+}
+</style>
+<body>
+	<div id="sell-tag">
+		<dl style="text-align: center">
+			<dd style="margin-top: 10px">
+				<div id="d-day"></div>
+			</dd>
+		</dl>
+	</div>
+
+	<div class="col-md-9">
+
+		<a href=""><img src="images/apple.jpg" alt="" width="250"
+			height="250" class="pp1" style="display: block"></a>
+		<h2>영천 사과</h2>
+		<h4>천재농사꾼 김준형씨의 작품 최고급 홍옥</h4>
+		<p>자식농사? 그게뭔데! 사과농사전문가</p>
+		<p>그의 손에서 자란 사과는 원숭이 엉덩이보다 빨개</p>
+		<p>2018년 최고매출 달성 !!</p>
+		<p class="box">
+			<strong>3KG ₩19,900<strong>
+		</p>
+		<button type="button" class="btn btn-default">구매하기 &raquo;</button>
+
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3" title="35000">
+				<h4>나주 배</h4>
+				<a href=""><img src="images/pear.jpeg" alt="" width="250"
+					height="180" class="pp1" style="display: block"></a>
+				<p class="box">
+					<strong>5KG ₩35,000<strong>
+				</p>
+				<p>
+					<a class="btn btn-default" href="#" role="button">구매하기 &raquo;</a>
+				</p>
+			</div>
+			<div class="col-md-3" title="15000">
+				<h4>논산 딸기</h4>
+				<a href=""><img src="images/st.jpg" alt="" width="250"
+					height="180" class="pp1" style="display: block"></a>
+				<p class="box">
+					<strong>1KG ₩15,000<strong>
+				</p>
+				<p>
+					<a class="btn btn-default" href="#" role="button">구매하기 &raquo;</a>
+				</p>
+			</div>
+			<div class="col-md-3" title="20000">
+				<h4>고랭지 배추</h4>
+				<a href=""><img src="images/bechu.jpg" alt="" width="250"
+					height="180" class="pp1" style="display: block"></a>
+				<p class="box">
+					<strong>10KG ₩20,000<strong>
+				</p>
+				<p>
+					<a class="btn btn-default" href="#" role="button">구매하기 &raquo;</a>
+				</p>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3" title="15000">
+				<h4>성주 참외</h4>
+				<a href=""><img src="images/cham.jpeg" alt="" width="250"
+					height="180" class="pp1" style="display: block"></a>
+				<p class="box">
+					<strong>3KG ₩15,000<strong>
+				</p>
+				<p>
+					<a class="btn btn-default" href="#" role="button">구매하기 &raquo;</a>
+				</p>
+			</div>
+			<div class="col-md-3" title="70000">
+				<h4>이천 쌀</h4>
+				<a href=""><img src="images/rice.jpeg" alt="" width="250"
+					height="180" class="pp1" style="display: block"></a>
+				<p class="box">
+					<strong>20KG ₩70,000<strong>
+				</p>
+				<p>
+					<a class="btn btn-default" href="#" role="button">구매하기 &raquo;</a>
+				</p>
+			</div>
+			<div class="col-md-3" title="85000">
+				<h4>금산 인삼</h4>
+				<a href=""><img src="images/jinsam.jpeg" alt="" width="250"
+					height="180" class="pp1" style="display: block"></a>
+				<p class="box">
+					<strong>4EA ₩85,000<strong>
+				</p>
+				<p>
+					<a class="btn btn-default" href="#" role="button">구매하기 &raquo;</a>
+				</p>
+			</div>
+
+		</div>
+	</div>
+
+</body>
+</head>
+</html>
