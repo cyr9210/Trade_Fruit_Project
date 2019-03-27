@@ -1,3 +1,5 @@
+블로그 : https://cyr9210.github.io/2018/12/19/Project/TradeFruit-System/
+
 # Trade_Fruit
 
 농수산물 거래 웹 사이트 제작
